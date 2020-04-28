@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <title>Badge</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .badge {
+        width: 75mm;
+        height: 95mm;
+        position: relative;
+        font-family: "Roboto", sans-serif;
+        padding: 10px;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 15px;
+        border: 1.5px solid #0b0b14;
+        text-align: center;
+        color: red;
+        background-color: lightgrey;
+      }
+      #info {
+        margin-top: 12px;
+        font-size: 25px;
+        width: 100%;
+        font-weight: bold;
+        font-family: "Times New Roman", Times, serif;
+        color: black;
+      }
+      #nume {
+        margin-top: 20px;
+        font-size: 15px;
+        width: 100%;
+        font-weight: bold;
+      }
+      #rol {
+        margin-top: 20px;
+        font-size: 15px;
+        font-style: italic;
+        width: 100%;
+        font-weight: bold;
+      }
+      #pozap {
+        width: 120px;
+        height: auto;
+        display: inline-block;
+        position: absolute;
+        top: 180px;
+        left: 10px;
+      }
+      #pozac {
+        width: 120px;
+        height: auto;
+        display: inline-block;
+        position: absolute;
+        top: 180px;
+        left: 10px;
+      }
+      #qr {
+        width: 100%;
+        height: auto;
+        display: inline-block;
+        position: absolute;
+        top: 180px;
+        left: 80px;
+      }
+      #qr.img {
+        width: 100px;
+        height: auto;
+      }
+
+      #numar {
+        width: 120px;
+        height: auto;
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Rally badge</h2>
+    <div id="pilot"></div>
+    <div id="copilot"></div>
+    <div>
+      <div class="badge">
+        <div id="info">Mitsubishi Team<br />Car: Mitsubishi Pajero</div>
+        <div id="nume">John SMITH</div>
+        <div id="rol">Pilot</div>
+        <div id="pozac"><img src="imagini/p243.jpg" /></div>
+        <div id="qr"><img src="imagini/qr243.jpg" /></div>
+        <div id="numar">Nr.243</div>
+      </div>
+      <div class="badge">
+        <div id="info">Mitsubishi Team<br />Car: Mitsubichi Pajero</div>
+        <div id="nume">Amanda THOMPSON</div>
+        <div id="rol">Co-pilot</div>
+        <div id="pozac"><img src="imagini/c243.jpg" /></div>
+        <div id="qr"><img src="imagini/qr243.jpg" /></div>
+        <div id="numar">Nr.243</div>
+      </div>
+    </div>
+    <script>
+      "use strict";
+
+      const echipaj = {
+        pilot: "John SMITH",
+        copilot: "Amanda THOMPSON",
+        number: 243,
+        car: "Mitsubishi Pajero",
+        team: "Mitubishi",
+        picturep: "p243.jpg",
+        picturec: "c243.jpg",
+        qrcode: "qr243.jpg",
+      };
+      document.querySelector("#info").innerHTML = [car, team];
+      document.querySelector("#nume").innerHTML = pilot;
+      document.querySelector("#rol").innerHTML = rol;
+      document.querySelector("#pozap").src = "imagini/" + picturep;
+      document.querySelector("#gr").src = "imagini/" + qrcode;
+      document.querySelector("#numar").innerHTML = number;
+      document.querySelector("#info").innerHTML = [car, team];
+      document.querySelector("#nume").innerHTML = copilot;
+      document.querySelector("#rol").innerHTML = rol;
+      document.querySelector("#pozac").src = "imagini/" + picturec;
+      document.querySelector("#gr").src = "imagini/" + qrcode;
+      document.querySelector("#numar").innerHTML = number;
+    </script>
+  </body>
+</html>
